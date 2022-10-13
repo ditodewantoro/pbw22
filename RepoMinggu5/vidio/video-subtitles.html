@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Contoh Subtitles Semantik</title>
+    </head>
+<body>
+<div style="text-align: center;">
+    <h1>Memasukan Subtitles</h1>
+    <button onclick="playPause()" type="button">Play/Pause</button>
+    <button onclick="makeBig()" type="button">Big</button>
+    <button onclick="makeSmall()" type="button">Small</button>
+    <button onclick="makeNormal()" type="button">Normal</button>
+    <br><br>
+    <video id="myVideo" width="420" height="240" controls>
+        <source src="Andai Kan Kau Datang.mp4" type="video/mp4">
+        <track label="indonesia" kind="subtitles" srclang="id" src="my_captions.vtt" default />
+    </video>
+</div>
+</body>
+<script>
+    var myVideo = document.getElementById("myVideo");
+
+    function playPause() {
+      if (myVideo.paused) 
+        myVideo.play();
+      else
+        myVideo.pause();
+    }
+    function makeBig() {
+        myVideo.width = 500;
+    }
+    function makeSmall() {
+        myVideo.width = 320;
+    }
+    function makeNormal() {
+        myVideo.width = 420;
+    }
+</script>
+</html>
