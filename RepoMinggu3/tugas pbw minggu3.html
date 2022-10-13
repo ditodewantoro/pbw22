@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas 3</title>
+</head>
+<body>
+<div style="text-align: center;">
+    <h1>Multimedia HTML 5</h1>
+    <button onclick="playPause()" type="button">Play/Pause</button>
+    <button onclick="makeBig()" type="button">Big</button>
+    <button onclick="makeSmall()" type="button">Small</button>
+    <button onclick="makeNormal()" type="button">Normal</button>
+    <br><br>
+    <video id="myVideo" width="420" height="240" controls>
+        <source src="Andai Kan Kau Datang.mp4" type="video/mp4">
+        <track label="indonesia" kind="subtitles" srclang="id" src="my_captions.vtt" default />
+    </video>
+    <h2>Memasukan Video dari YouTube</h2>
+    <iframe width="420" height="240" src="https://www.youtube.com/embed/2_un2nWi0KU" title="ANDAIKAN KAU DATANG KEMBALI - KOES PLUS ( LIVE COVER BY REGITA ECHA )" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</body>
+<script>
+    var myVideo = document.getElementById("myVideo");
+
+    function playPause() {
+      if (myVideo.paused) 
+        myVideo.play();
+      else
+        myVideo.pause();
+    }
+    function makeBig() {
+        myVideo.width = 500;
+    }
+    function makeSmall() {
+        myVideo.width = 320;
+    }
+    function makeNormal() {
+        myVideo.width = 420;
+    }
+</script>
+</html>
